@@ -1,28 +1,33 @@
 <template>
   <section class="container">
     <canvas id="bubbly"></canvas>
-    <div>
-      <logo />
-      <h1 class="title">
-        portfolio
-      </h1>
-      <h2 class="subtitle">
-        My astonishing Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
-        <div v-scroll="handleScroll" class="fade-in"><about /></div>
-        <div v-scroll="handleScroll" class="fade-in"><about /></div>
-        <div v-scroll="handleScroll" class="fade-in"><about /></div>
-        <div v-scroll="handleScroll" class="fade-in"><about /></div>
+    <div class="body">
+      <div class="title-container">
+        <h1 class="title">
+          <logo />
+          portfolio
+        </h1>
+        <h2 class="subtitle">
+          My astonishing Nuxt.js project
+        </h2>
+        <div class="links">
+          <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+            >Documentation</a
+          >
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            class="button--grey"
+            >GitHub</a
+          >
+        </div>
+      </div>
+      <div>
+        <div class="about-area"><about /></div>
+        <div class="skills-area"><skills /></div>
+        <div class="fade-in"><about /></div>
+        <div class="fade-in"><about /></div>
+        <div class="fade-in"><about /></div>
         <div v-scroll="handleScroll" class="fade-in"><about /></div>
         <div v-scroll="handleScroll" class="fade-in"><about /></div>
       </div>
@@ -32,12 +37,14 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import about from '~/components/about.vue'
+import about from '~/components/About.vue'
+import skills from '~/components/Skills.vue'
 
 export default {
   components: {
     Logo,
-    about
+    about,
+    skills
   },
   mounted() {
     const c = {}
@@ -120,20 +127,73 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
+  max-width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow-x: hidden;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.body:before,
+.body:after,
+.container:before,
+.container:after {
+  content: '';
+  background: #ffffff;
+  position: fixed;
+  display: block;
+  z-index: 5;
+}
+/*上*/
+.body:before {
+  height: 60px;
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+@media screen and (min-width: 768px) {
+  /*下*/
+  .body:after {
+    height: 60px;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+  }
+  .container:before,
+  .container:after {
+    width: 60px;
+    height: 100vh;
+    top: 0;
+  }
+  /*左*/
+  .container:before {
+    left: 0;
+  }
+  /*右*/
+  .container:after {
+    right: 0;
+  }
+}
+.title-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
+  display: flex;
   font-weight: 300;
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+  position: fixed;
+  z-index: -4;
 }
 
 .subtitle {
@@ -142,34 +202,49 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  position: fixed;
+  top: 330px;
+  z-index: -4;
 }
 
 .links {
   padding-top: 15px;
+  position: fixed;
+  top: 370px;
+  z-index: -4;
 }
 
 #bubbly {
   position: fixed;
-  z-index: -1;
+  z-index: -5;
   top: 0;
   left: 0;
   min-width: 100vw;
   min-height: 100vh;
 }
 
+/* .about-area {
+  overflow-x: hidden;
+} */
+
+.skills-area {
+  /* min-width: 100vw;
+  overflow-x: hidden; */
+}
+
 .fade-in {
   opacity: 0;
+  /* width: 100vw; */
 }
 
 .fade-in.isView {
-  opacity: 0;
   animation-name: fade-in;
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-delay: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 
 @keyframes fade-in {
