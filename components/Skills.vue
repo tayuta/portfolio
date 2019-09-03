@@ -28,7 +28,7 @@
   height: 100vh;
   width: 120%;
   margin-top: -200px;
-  margin-left: -100px;
+  margin-left: -60px;
 }
 
 .skills-container .inner {
@@ -51,17 +51,17 @@
 
 @media screen and (max-width: 576px) {
   .skills-contents {
-    max-width: 500px;
+    max-width: 400px;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 767px) {
   .skills-contents {
-    max-width: 550px;
+    max-width: 500px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .skills-contents {
-    max-width: 800px;
+    max-width: 700px;
   }
 }
 @media screen and (min-width: 992px) {
