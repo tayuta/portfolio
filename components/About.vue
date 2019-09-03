@@ -8,7 +8,7 @@
           <td>Yuka</td>
         </tr>
         <tr>
-          <th>sex</th>
+          <th>Sex</th>
           <td>Woman</td>
         </tr>
         <tr>

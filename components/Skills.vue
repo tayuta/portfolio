@@ -4,7 +4,7 @@
       <h3 class="skills-title">Skills</h3>
       <div class="skills-contents">
         <div class="diamond">
-          <div class="diamond-inner">java</div>
+          <div class="diamond-inner">Java</div>
         </div>
         <div class="diamond">
           <div class="diamond-inner">Vue.js / Nuxt.js</div>
