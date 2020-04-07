@@ -17,7 +17,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/portfolio/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/portfolio/favicon.ico' }
+    ]
   },
 
   /*
@@ -33,9 +35,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~plugins/scroll.js'
-  ],
+  plugins: ['~plugins/vue-scrollto', '~plugins/scroll.js'],
 
   /*
    ** Nuxt.js modules
