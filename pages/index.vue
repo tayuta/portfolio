@@ -9,7 +9,7 @@
       <div id="skills-area"><skills /></div>
       <div class="works-naname"></div>
       <div id="works-area"><works /></div>
-      <div id="parallax"><parallax /></div>
+      <div id="dogs-area"><dogs /></div>
     </div>
   </section>
 </template>
@@ -20,7 +20,7 @@ import home from '~/components/Home.vue'
 import about from '~/components/About.vue'
 import skills from '~/components/Skills.vue'
 import works from '~/components/Works.vue'
-import parallax from '~/components/Parallax.vue'
+import dogs from '~/components/Dogs.vue'
 import mixin from '~/components/mixin.js'
 
 export default {
@@ -30,7 +30,7 @@ export default {
     about,
     skills,
     works,
-    parallax
+    dogs
   },
   mixins: [mixin],
   mounted() {

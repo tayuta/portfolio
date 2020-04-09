@@ -86,6 +86,9 @@ h3 span {
         transition: all 0.5s;
         filter: saturate(0);
       }
+      .col-lg-6:nth-child(2) {
+        background: #fffaf9;
+      }
       @media screen and (max-width: 991px) {
         .col-lg-6:first-child {
           border-bottom: 3px dashed #443319;
