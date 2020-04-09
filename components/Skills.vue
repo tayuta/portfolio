@@ -1,7 +1,8 @@
 <template>
   <div class="skills">
+    <img class="skills-back" :src="sakuraTree_img" />
     <div class="skills-inner">
-      <h3 class="title">Skills</h3>
+      <h3 class="title"><span>Skills</span></h3>
       <div class="contents">
         <div
           v-for="(skill, key, index) in skills"
@@ -40,6 +41,7 @@ export default {
   data: function() {
     return {
       selectedSkill: 0,
+      sakuraTree_img: require('~/static/sakuraTree.jpg'),
       skills: [
         {
           name: 'Java',
@@ -83,6 +85,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+h3 span {
+  display: block;
+  margin: 11px 0 17px 0;
+  font-size: 80px;
+  line-height: 80px;
+  text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #c4b59d;
+  letter-spacing: -2px;
+}
 .skills {
   -webkit-transform: rotate(10deg) translate3d(0, 0, 0);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
@@ -90,6 +100,16 @@ export default {
   height: 1250px;
   width: 160%;
   margin-left: -160px;
+  color: #443319;
+  position: relative;
+
+  .skills-back {
+    position: absolute;
+    top: -70px;
+    -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
+    height: 1100px;
+    opacity: 0.4;
+  }
 
   .skills-inner {
     -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
@@ -97,17 +117,82 @@ export default {
     margin-left: 130px;
 
     .title {
-      font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-        sans-serif;
-      font-weight: 600;
-      font-size: 50px;
-      color: #35495e;
-      letter-spacing: 1px;
-      padding: 100px 0px 0px;
+      padding: 80px 20% 0px;
+      text-align: left;
     }
     .contents {
       margin: auto;
+
+      .skill {
+        display: inline-block;
+      }
+
+      .skill-diamond.active {
+        transition: all 0.75s;
+        background: #ffada0;
+        &:hover {
+          border: 3px dashed #443319;
+          .inner {
+            color: #443319;
+          }
+        }
+      }
+      .skill-diamond {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        width: 140px;
+        height: 140px;
+        background: #fffaf9;
+        border: 3px dashed #443319;
+        transform: rotate(45deg);
+        margin: 55px 31px 4px 27px;
+        display: inline-block;
+        transition: all 0.5s;
+        &:hover {
+          transform: rotate(45deg);
+          border: 3px dashed #ff7560;
+          .inner {
+            color: #ff7560;
+          }
+        }
+
+        .inner {
+          white-space: nowrap;
+          font-size: 22px;
+          line-height: 45px;
+          background: transparent;
+          transform: rotate(-45deg);
+          text-align: center;
+          margin-top: 50px;
+          transition: all 0.5s;
+        }
+      }
+    }
+
+    .detail {
+      animation-delay: 1s;
+      box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.08);
+      border: 3px dashed #443319;
+      position: relative;
+      margin: 60px auto 0;
+      width: 480px;
+      height: 170px;
+      background: #fffaf9;
+
+      .detail-area {
+        position: absolute;
+
+        .skill-name {
+          text-align: left;
+          font-size: 22px;
+          margin: 15px 20px;
+        }
+        .skill-detail {
+          text-align: left;
+          font-size: 18px;
+          margin: 10px 20px;
+        }
+      }
     }
     @media screen and (max-width: 767px) {
       .contents {
@@ -123,65 +208,6 @@ export default {
       .contents {
         max-width: 800px;
       }
-    }
-  }
-}
-
-.skill {
-  display: inline-block;
-}
-
-.skill-diamond.active {
-  transition: all 0.75s 0.15s;
-  background: #ffada0;
-}
-.skill-diamond {
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  width: 140px;
-  height: 140px;
-  background: #fffaf9;
-  border: 3px dotted #35495e;
-  transform: rotate(45deg);
-  margin: 55px 31px 4px 27px;
-  display: inline-block;
-
-  .inner {
-    white-space: nowrap;
-    font-size: 22px;
-    line-height: 45px;
-    color: #35495e;
-    background: transparent;
-    transform: rotate(-45deg);
-    text-align: center;
-    margin-top: 50px;
-  }
-}
-
-.detail {
-  animation-delay: 1s;
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.08);
-  border: 3px dotted #35495e;
-  position: relative;
-  margin: 80px auto 0;
-  width: 480px;
-  height: 170px;
-  background: #fffaf9;
-
-  .detail-area {
-    position: absolute;
-
-    .skill-name {
-      color: #35495e;
-      text-align: left;
-      font-size: 22px;
-      margin: 15px 20px;
-    }
-    .skill-detail {
-      color: #35495e;
-      text-align: left;
-      font-size: 18px;
-      margin: 10px 20px;
     }
   }
 }

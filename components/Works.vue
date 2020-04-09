@@ -1,24 +1,22 @@
 <template>
   <div class="works">
     <div class="inner">
-      <h3 class="title">Works</h3>
-      <div class="works-contents">
-        <div
-          v-for="(work, key, index) in works"
-          :key="index"
-          v-scroll="handleScroll"
-          class="fade-in work card mb-3"
-          style="max-width: 500px;"
-        >
-          <div class="row no-gutters">
-            <div class="col-lg-6">
-              <img :src="work.img" class="card-img" alt="..." />
-            </div>
-            <div class="col-lg-6">
-              <div class="card-body">
-                <h4 class="card-title">{{ work.name }}</h4>
-                <p class="card-text">{{ work.detail }}</p>
-              </div>
+      <h3 class="title"><span>Works</span></h3>
+      <div
+        v-for="(work, key, index) in works"
+        :key="index"
+        v-scroll="handleScroll"
+        class="fade-in work card mb-3"
+        style="max-width: 500px;"
+      >
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <img :src="work.img" class="card-img" alt="..." />
+          </div>
+          <div class="col-lg-6">
+            <div class="card-body">
+              <h4 class="card-title">{{ work.name }}</h4>
+              <p class="card-text">{{ work.detail }}</p>
             </div>
           </div>
         </div>
@@ -51,6 +49,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+h3 span {
+  display: block;
+  margin: 11px 0 17px 0;
+  font-size: 80px;
+  line-height: 80px;
+  text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #c4b59d;
+  letter-spacing: -2px;
+}
+
 .works {
   -webkit-transform: rotate(-6deg) translate3d(0, 0, 0);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
@@ -58,6 +65,7 @@ export default {
   width: 160%;
   margin-left: -180px;
   padding-bottom: 150px;
+  color: #443319;
 
   .inner {
     -webkit-transform: rotate(6deg) translate3d(0, 0, 0);
@@ -65,20 +73,31 @@ export default {
     margin-left: 185px;
 
     .title {
-      font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-        sans-serif;
-      font-weight: 600;
-      font-size: 50px;
-      color: #35495e;
-      letter-spacing: 1px;
-      padding: 100px 0px 40px;
+      padding: 80px 0px 10px;
+    }
+
+    .work {
+      margin: 20px auto;
+      border: 3px dashed #443319;
+      &:hover .col-lg-6:first-child img {
+        filter: saturate(100%);
+      }
+      .col-lg-6:first-child img {
+        transition: all 0.5s;
+        filter: saturate(0);
+      }
+      @media screen and (max-width: 991px) {
+        .col-lg-6:first-child {
+          border-bottom: 3px dashed #443319;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .col-lg-6:first-child {
+          border-right: 3px dashed #443319;
+        }
+      }
     }
   }
-}
-
-.work {
-  margin: auto;
 }
 
 .fade-in {

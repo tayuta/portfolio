@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div>
-      <h3 v-scroll="handleScroll" class="fade-in title">About</h3>
+      <h3 v-scroll="handleScroll" class="fade-in title"><span>About</span></h3>
       <img v-scroll="handleScroll" class="fade-in img" :src="fubuki_img" />
       <table v-scroll="handleScroll" class="fade-in about-table">
         <tr>
@@ -42,20 +42,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
+h3 span {
+  display: block;
+  margin: 11px 0 17px 0;
+  font-size: 80px;
+  line-height: 80px;
+  text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #c4b59d;
+  letter-spacing: -2px;
+}
+
 .about {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-  background-color: #efefef;
+  background: linear-gradient(90deg, #ccc5c3 0%, #ccc5c3 30%, #efefef 30%);
   height: 1100px;
+  color: #443319;
 
   .title {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-      BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-      sans-serif;
-    font-weight: 600;
-    font-size: 50px;
-    color: #35495e;
-    letter-spacing: 1px;
-    padding: 100px 0px 0px;
+    padding: 80px 0px 0px;
   }
 
   .img {
