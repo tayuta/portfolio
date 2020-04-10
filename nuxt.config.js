@@ -35,7 +35,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-scrollto', '~plugins/scroll.js', '~/plugins/vue-awesome-swiper.js'],
+  plugins: ['~plugins/vue-scrollto', '~plugins/scroll.js', '~/plugins/vue-awesome-swiper.js', '~/plugins/vue-prlx.js'],
 
   /*
    ** Nuxt.js modules

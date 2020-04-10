@@ -6,10 +6,10 @@
       <div id="home-area"><home /></div>
       <div id="about-area"><about /></div>
       <div class="skills-naname"></div>
-      <div id="skills-area"><skills /></div>
-      <div class="works-naname"></div>
+      <div id="skills-area" v-prlx.mobile="{ reverse: true }"><skills /></div>
       <div id="works-area"><works /></div>
-      <div id="dogs-area"><dogs /></div>
+      <div class="dogs-naname"></div>
+      <div id="dogs-area" v-prlx.mobile="{ reverse: true }"><dogs /></div>
     </div>
   </section>
 </template>
@@ -64,29 +64,37 @@ export default {
 #skills-area {
   margin-top: -490px;
 }
-.works-naname {
+@media screen and (max-width: 767px) {
+  #works-area {
+    margin-top: -270px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #works-area {
+    margin-top: -460px;
+  }
+}
+.dogs-naname {
   background: linear-gradient(10deg, #ffca61 40%, #ffa467);
   height: 300px;
   width: 100%;
   transform: rotate(10deg);
   margin-left: -100px;
+  margin-top: -200px;
   opacity: 0.5;
 }
-
-@media screen and (max-width: 767px) {
-  .works-naname {
-    margin-top: -150px;
-  }
-  #works-area {
-    margin-top: -250px;
+#dogs-area {
+  margin-top: -280px;
+  margin-bottom: -250px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #dogs-area {
+    margin-bottom: -160px;
   }
 }
-@media screen and (min-width: 768px) {
-  .works-naname {
-    margin-top: -400px;
-  }
-  #works-area {
-    margin-top: -300px;
+@media screen and (min-width: 992px) {
+  #dogs-area {
+    margin-bottom: -70px;
   }
 }
 

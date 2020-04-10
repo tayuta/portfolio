@@ -59,18 +59,38 @@ h3 span {
 }
 
 .works {
-  -webkit-transform: rotate(-6deg) translate3d(0, 0, 0);
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff7e6;
-  width: 160%;
-  margin-left: -180px;
-  padding-bottom: 150px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3) inset;
+  position: relative;
+  margin-top: -50px;
+  background-image: url('~@/static/dogs-background.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
   color: #443319;
+  padding: 0 0 300px 0;
+
+  &:before {
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+  }
 
   .inner {
-    -webkit-transform: rotate(6deg) translate3d(0, 0, 0);
-    max-width: 65%;
-    margin-left: 185px;
+    width: 100%;
+    padding: 0 70px;
+    top: 20%;
 
     .title {
       padding: 80px 0px 10px;
@@ -79,8 +99,23 @@ h3 span {
     .work {
       margin: 20px auto;
       border: 3px dashed #443319;
-      &:hover .col-lg-6:first-child img {
-        filter: saturate(100%);
+      transition: all 0.5s;
+      &:hover {
+        border: 3px dashed #ff7560;
+        color: #ff7560;
+        @media screen and (max-width: 991px) {
+          .col-lg-6:first-child {
+            border-bottom: 3px dashed #ff7560;
+          }
+        }
+        @media screen and (min-width: 992px) {
+          .col-lg-6:first-child {
+            border-right: 3px dashed #ff7560;
+          }
+        }
+        .col-lg-6:first-child img {
+          filter: saturate(100%);
+        }
       }
       .col-lg-6:first-child img {
         transition: all 0.5s;
@@ -92,11 +127,13 @@ h3 span {
       @media screen and (max-width: 991px) {
         .col-lg-6:first-child {
           border-bottom: 3px dashed #443319;
+          transition: all 0.5s;
         }
       }
       @media screen and (min-width: 992px) {
         .col-lg-6:first-child {
           border-right: 3px dashed #443319;
+          transition: all 0.5s;
         }
       }
     }

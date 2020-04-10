@@ -121,38 +121,19 @@ h3 span {
   letter-spacing: -2px;
 }
 .dogs {
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3) inset;
-  position: relative;
-  margin-top: -50px;
-  background-image: url('~@/static/dogs-background.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0;
+  -webkit-transform: rotate(-6deg) translate3d(0, 0, 0);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff7e6;
+  width: 160%;
+  margin-left: -180px;
+  padding-bottom: 170px;
   color: #443319;
-  padding: 0 0 80px 0;
-
-  &:before {
-    content: '';
-    background: inherit;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    position: absolute;
-    top: 5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-  }
 
   .inner {
-    width: 100%;
+    -webkit-transform: rotate(6deg) translate3d(0, 0, 0);
+    max-width: 62.5%;
+    margin-left: 187px;
     padding: 0 70px;
-    top: 20%;
     @media screen and (max-width: 767px) {
       padding: 0;
     }

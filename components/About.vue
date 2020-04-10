@@ -2,7 +2,7 @@
   <div class="about">
     <div>
       <h3 v-scroll="handleScroll" class="fade-in title"><span>About</span></h3>
-      <img v-scroll="handleScroll" class="fade-in img" :src="fubuki_img" />
+      <img v-scroll="handleScroll" class="fade-in img" :src="about_img" />
       <table v-scroll="handleScroll" class="fade-in about-table">
         <tr>
           <th>Name</th>
@@ -35,7 +35,7 @@ export default {
   mixins: [mixin],
   data: function() {
     return {
-      fubuki_img: require('~/static/fubuki.png')
+      about_img: require('~/static/about.png')
     }
   }
 }
@@ -64,7 +64,8 @@ h3 span {
   .img {
     width: 300px;
     border-radius: 50%;
-    padding: 20px 0px 30px;
+    margin: 20px 0px 30px;
+    border: 3px dashed #443319;
   }
 }
 
