@@ -98,8 +98,8 @@ h3 span {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
   background-color: #ffdadf;
   height: 1250px;
-  width: 160%;
-  margin-left: -160px;
+  width: 200%;
+  margin-left: -180px;
   color: #443319;
   position: relative;
 
@@ -113,8 +113,8 @@ h3 span {
 
   .skills-inner {
     -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
-    max-width: 65%;
-    margin-left: 130px;
+    max-width: 50%;
+    margin-left: 157px;
 
     .title {
       padding: 80px 20% 0px;
@@ -197,6 +197,18 @@ h3 span {
     @media screen and (max-width: 767px) {
       .contents {
         max-width: 500px;
+        .skill-diamond {
+          width: 125px;
+          height: 125px;
+          .inner {
+            margin-top: 40px;
+            margin-left: -8px;
+          }
+        }
+      }
+      .detail {
+        width: 370px;
+        height: 185px;
       }
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {

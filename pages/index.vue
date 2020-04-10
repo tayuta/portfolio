@@ -58,18 +58,24 @@ export default {
   height: 500px;
   width: 120%;
   transform: rotate(-15deg);
-  margin-top: -230px;
+  margin-top: -150px;
   opacity: 0.5;
 }
 #skills-area {
   margin-top: -490px;
 }
 @media screen and (max-width: 767px) {
+  .skills-naname {
+    margin-top: -250px;
+  }
   #works-area {
     margin-top: -270px;
   }
 }
 @media screen and (min-width: 768px) {
+  .skills-naname {
+    margin-top: -120px;
+  }
   #works-area {
     margin-top: -460px;
   }
@@ -94,7 +100,7 @@ export default {
 }
 @media screen and (min-width: 992px) {
   #dogs-area {
-    margin-bottom: -70px;
+    margin-bottom: -50px;
   }
 }
 

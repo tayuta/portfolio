@@ -124,15 +124,15 @@ h3 span {
   -webkit-transform: rotate(-6deg) translate3d(0, 0, 0);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff7e6;
-  width: 160%;
+  width: 200%;
   margin-left: -180px;
   padding-bottom: 170px;
   color: #443319;
 
   .inner {
     -webkit-transform: rotate(6deg) translate3d(0, 0, 0);
-    max-width: 62.5%;
-    margin-left: 187px;
+    max-width: 53%;
+    margin-left: 173px;
     padding: 0 70px;
     @media screen and (max-width: 767px) {
       padding: 0;
