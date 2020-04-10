@@ -2,7 +2,9 @@
   <div class="skills">
     <img class="skills-back" :src="sakuraTree_img" />
     <div class="skills-inner">
-      <h3 class="title"><span>Skills</span></h3>
+      <h3 class="title">
+        <span>Skills</span>
+      </h3>
       <div class="contents">
         <div
           v-for="(skill, key, index) in skills"
@@ -41,7 +43,7 @@ export default {
   data: function() {
     return {
       selectedSkill: 0,
-      sakuraTree_img: require('~/static/sakuraTree.jpg'),
+      sakuraTree_img: require('~/static/skills-background.jpg'),
       skills: [
         {
           name: 'Java',
@@ -105,7 +107,8 @@ h3 span {
 
   .skills-back {
     position: absolute;
-    top: -70px;
+    top: -68px;
+    left: 40%;
     -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
     height: 1100px;
     opacity: 0.4;

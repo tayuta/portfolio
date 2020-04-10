@@ -34,11 +34,11 @@ export default {
           imgs: [
             {
               title: '1',
-              img: require('~/static/dogs/happy_1.png')
+              img: require('~/static/dogs/happy_1.jpg')
             },
             {
               title: '2',
-              img: require('~/static/dogs/happy_2.png')
+              img: require('~/static/dogs/happy_2.jpg')
             }
           ]
         },
@@ -47,15 +47,15 @@ export default {
           imgs: [
             {
               title: '1',
-              img: require('~/static/dogs/sakura_1.png')
+              img: require('~/static/dogs/sakura_1.jpg')
             },
             {
               title: '2',
-              img: require('~/static/dogs/sakura_2.png')
+              img: require('~/static/dogs/sakura_2.jpg')
             },
             {
               title: '3',
-              img: require('~/static/dogs/sakura_3.png')
+              img: require('~/static/dogs/sakura_3.jpg')
             }
           ]
         },
@@ -64,15 +64,15 @@ export default {
           imgs: [
             {
               title: '1',
-              img: require('~/static/dogs/fubuki_1.png')
+              img: require('~/static/dogs/fubuki_1.jpg')
             },
             {
               title: '2',
-              img: require('~/static/dogs/fubuki_2.png')
+              img: require('~/static/dogs/fubuki_2.jpg')
             },
             {
               title: '3',
-              img: require('~/static/dogs/fubuki_3.png')
+              img: require('~/static/dogs/fubuki_3.jpg')
             }
           ]
         }
@@ -131,7 +131,7 @@ h3 span {
 
   .inner {
     -webkit-transform: rotate(6deg) translate3d(0, 0, 0);
-    max-width: 53%;
+    max-width: 51%;
     margin-left: 173px;
     padding: 0 70px;
     @media screen and (max-width: 767px) {

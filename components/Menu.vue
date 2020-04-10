@@ -16,7 +16,7 @@
       <div class="inner">
         <li><nuxt-link v-scroll-to="'#home-area'" to>Home</nuxt-link></li>
         <li><nuxt-link v-scroll-to="'#about-area'" to>About</nuxt-link></li>
-        <li><nuxt-link v-scroll-to="'#skills-area'" to>Skills</nuxt-link></li>
+        <li><nuxt-link v-scroll-to="'#skills-top'" to>Skills</nuxt-link></li>
         <li><nuxt-link v-scroll-to="'#works-area'" to>Works</nuxt-link></li>
         <li><nuxt-link v-scroll-to="'#dogs-area'" to>Dogs</nuxt-link></li>
       </div>

@@ -35,7 +35,7 @@ export default {
   mixins: [mixin],
   data: function() {
     return {
-      about_img: require('~/static/about.png')
+      about_img: require('~/static/about.jpg')
     }
   }
 }
@@ -54,7 +54,7 @@ h3 span {
 .about {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
   background: linear-gradient(90deg, #ccc5c3 0%, #ccc5c3 30%, #efefef 30%);
-  height: 1100px;
+  height: 850px;
   color: #443319;
 
   .title {

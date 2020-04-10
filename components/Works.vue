@@ -35,12 +35,12 @@ export default {
         {
           name: 'Portfolio',
           detail: 'ポートフォリオ（このページ）です。',
-          img: require('~/static/portfolio.png')
+          img: require('~/static/portfolio.jpg')
         },
         {
           name: 'etc...',
           detail: 'これから増やしていきたい所存。',
-          img: require('~/static/fubuki2.png')
+          img: require('~/static/fubuki.jpg')
         }
       ]
     }
@@ -62,7 +62,7 @@ h3 span {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3) inset;
   position: relative;
   margin-top: -50px;
-  background-image: url('~@/static/dogs-background.png');
+  background-image: url('~@/static/works-background.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

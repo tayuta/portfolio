@@ -5,6 +5,7 @@
       <div class="menu-area"><hMenu /></div>
       <div id="home-area"><home /></div>
       <div id="about-area"><about /></div>
+      <div id="skills-top"></div>
       <div class="skills-naname"></div>
       <div id="skills-area" v-prlx.mobile="{ reverse: true }"><skills /></div>
       <div id="works-area"><works /></div>
@@ -53,20 +54,21 @@ export default {
 </script>
 
 <style lang="scss">
+#skills-top {
+  height: 140px;
+  background: linear-gradient(90deg, #ccc5c3 0%, #ccc5c3 30%, #efefef 30%);
+}
 .skills-naname {
   background: linear-gradient(-15deg, #ff7560 60%, #ffe4df);
   height: 500px;
   width: 120%;
   transform: rotate(-15deg);
-  margin-top: -150px;
   opacity: 0.5;
-}
-#skills-area {
-  margin-top: -490px;
+  margin-bottom: -490px;
 }
 @media screen and (max-width: 767px) {
   .skills-naname {
-    margin-top: -250px;
+    margin-top: -100px;
   }
   #works-area {
     margin-top: -270px;
@@ -74,7 +76,7 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .skills-naname {
-    margin-top: -120px;
+    margin-top: -20px;
   }
   #works-area {
     margin-top: -460px;
