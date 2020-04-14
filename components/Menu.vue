@@ -39,7 +39,6 @@ export default {
 .menu-contents.closed {
   transition: all 0.75s 0.15s;
   opacity: 0;
-  visibility: hidden;
 }
 .menu-contents.active {
   transition: all 0.75s 0.15s;
@@ -57,6 +56,7 @@ export default {
   transform: rotate(50deg);
   z-index: -1;
   opacity: 0;
+  visibility: hidden;
 
   .inner {
     position: relative;
