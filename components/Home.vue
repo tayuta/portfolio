@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <div class="title">
-      <h1 class="main"><span>portfolio</span></h1>
+      <h1 class="main">
+        <span>Yuka's portfolio</span>
+      </h1>
       <h2 class="sub">Welcome to my portfolio site</h2>
     </div>
   </div>
@@ -28,7 +30,7 @@ h1 span {
 
     .main {
       font-weight: 500;
-      font-size: 100px;
+      font-size: 90px;
       letter-spacing: -1px;
     }
 
