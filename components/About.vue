@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div>
-      <h3 v-scroll="handleScroll" class="fade-in title"><span>About</span></h3>
+      <h3 class="title"><span>About</span></h3>
       <img v-scroll="handleScroll" class="fade-in img" :src="about_img" />
       <table v-scroll="handleScroll" class="fade-in about-table">
         <tr>

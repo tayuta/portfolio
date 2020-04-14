@@ -5,7 +5,8 @@
       <div
         v-for="(dog, index) in dogs"
         :key="index"
-        class="card"
+        v-scroll="handleScroll"
+        class="fade-in card"
         style="width: 23rem;"
       >
         <swiper ref="mySwiper1" :options="swiperOption">
@@ -150,6 +151,26 @@ h3 span {
         background: #fffaf9;
       }
     }
+  }
+}
+.fade-in {
+  opacity: 0;
+}
+.fade-in.isView {
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
