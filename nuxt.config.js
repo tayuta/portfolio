@@ -43,6 +43,12 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa'
   ],
+  
+  manifest: {
+    name: "Yuka's portfolio",
+    lang: 'ja'
+  },
+
   /*
    ** Axios module configuration
    */
