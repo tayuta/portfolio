@@ -7,6 +7,10 @@ export default {
     base: '/portfolio/'
   },
 
+  generate: {
+    fallback: true
+  },
+  
   /*
    ** Headers of the page
    */
