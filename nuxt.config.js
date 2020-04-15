@@ -3,10 +3,6 @@ import pkg from './package'
 export default {
   mode: 'spa',
 
-  router: {
-    base: '/portfolio/'
-  },
-
   /*
    ** Headers of the page
    */
@@ -18,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/portfolio/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
