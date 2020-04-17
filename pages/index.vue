@@ -11,6 +11,7 @@
       <div id="works-area"><works /></div>
       <div class="dogs-naname"></div>
       <div id="dogs-area" v-prlx.mobile="{ reverse: true }"><dogs /></div>
+      <div class="dogs-bottom"></div>
     </div>
   </section>
 </template>
@@ -126,7 +127,7 @@ export default {
     margin-top: -100px;
   }
   #works-area {
-    margin-top: -270px;
+    margin-top: -470px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -134,30 +135,39 @@ export default {
     margin-top: -20px;
   }
   #works-area {
-    margin-top: -460px;
+    margin-top: -660px;
   }
 }
 .dogs-naname {
   background: linear-gradient(10deg, #ffca61 40%, #ffa467);
-  height: 300px;
+  height: 500px;
   width: 100%;
   transform: rotate(10deg);
   margin-left: -100px;
-  margin-top: -200px;
+  margin-top: -300px;
   opacity: 0.5;
 }
 #dogs-area {
-  margin-top: -280px;
-  margin-bottom: -250px;
+  margin-top: -480px;
+}
+.dogs-bottom {
+  background-color: #fff7e6;
+  margin-top: -300px;
+  z-index: 5;
+}
+@media screen and (max-width: 767px) {
+  .dogs-bottom {
+    height: 100px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  #dogs-area {
-    margin-bottom: -160px;
+  .dogs-bottom {
+    height: 200px;
   }
 }
 @media screen and (min-width: 992px) {
-  #dogs-area {
-    margin-bottom: -50px;
+  .dogs-bottom {
+    height: 300px;
   }
 }
 

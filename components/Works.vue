@@ -69,7 +69,7 @@ h3 span {
   background-repeat: no-repeat;
   z-index: 0;
   color: #443319;
-  padding: 0 0 300px 0;
+  padding: 0 0 400px 0;
 
   &:before {
     content: '';

@@ -123,7 +123,7 @@ h3 span {
 }
 .dogs {
   -webkit-transform: rotate(-6deg) translate3d(0, 0, 0);
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -10px 10px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff7e6;
   width: 200%;
   margin-left: -180px;
@@ -139,7 +139,7 @@ h3 span {
       padding: 0;
     }
     .title {
-      padding: 80px 0px 10px;
+      padding: 80px 0px 30px;
     }
     .card {
       margin: 20px;

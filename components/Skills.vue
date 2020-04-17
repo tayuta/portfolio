@@ -99,7 +99,7 @@ h3 span {
   -webkit-transform: rotate(10deg) translate3d(0, 0, 0);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
   background-color: #ffdadf;
-  height: 1250px;
+  height: 1450px;
   width: 200%;
   margin-left: -180px;
   color: #443319;
@@ -117,7 +117,7 @@ h3 span {
   .skills-inner {
     -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
     max-width: 50%;
-    margin-left: 157px;
+    margin-left: 140px;
 
     .title {
       padding: 80px 20% 0px;
