@@ -1,5 +1,6 @@
 <template>
   <div class="dogs">
+    <div class="dogs-back"></div>
     <div class="inner">
       <h3 class="title"><span>Dogs</span></h3>
       <div
@@ -126,9 +127,21 @@ h3 span {
   box-shadow: 0 -10px 10px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff7e6;
   width: 200%;
+  margin-top: -500px;
   margin-left: -180px;
-  padding-bottom: 170px;
+  padding-bottom: 300px;
   color: #443319;
+  overflow: hidden;
+
+  .dogs-back {
+    background-color: #ffe2a6;
+    position: absolute;
+    left: 40%;
+    -webkit-transform: rotate(6deg) translate3d(0, 0, 0);
+    height: 200%;
+    width: 100%;
+    opacity: 0.6;
+  }
 
   .inner {
     -webkit-transform: rotate(6deg) translate3d(0, 0, 0);

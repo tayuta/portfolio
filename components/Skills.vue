@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <img class="skills-back" :src="sakuraTree_img" />
+    <img class="skills-back" :src="background_img" />
     <div class="skills-inner">
       <h3 class="title">
         <span>Skills</span>
@@ -43,7 +43,7 @@ export default {
   data: function() {
     return {
       selectedSkill: 0,
-      sakuraTree_img: require('~/static/skills-background.jpg'),
+      background_img: require('~/static/skills-background.jpg'),
       skills: [
         {
           name: 'Java',
@@ -104,13 +104,14 @@ h3 span {
   margin-left: -180px;
   color: #443319;
   position: relative;
+  overflow: hidden;
 
   .skills-back {
     position: absolute;
-    top: -68px;
+    top: -200px;
     left: 40%;
     -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
-    height: 1100px;
+    height: 1270px;
     opacity: 0.4;
   }
 

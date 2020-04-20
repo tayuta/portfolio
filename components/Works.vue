@@ -57,11 +57,19 @@ h3 span {
   text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #c4b59d;
   letter-spacing: -2px;
 }
-
+@media screen and (max-width: 767px) {
+  .works {
+    margin-top: -470px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .works {
+    margin-top: -660px;
+  }
+}
 .works {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3) inset;
   position: relative;
-  margin-top: -50px;
   background-image: url('~@/static/works-background.jpg');
   background-attachment: fixed;
   background-position: center;

@@ -126,16 +126,10 @@ export default {
   .skills-naname {
     margin-top: -100px;
   }
-  #works-area {
-    margin-top: -470px;
-  }
 }
 @media screen and (min-width: 768px) {
   .skills-naname {
     margin-top: -20px;
-  }
-  #works-area {
-    margin-top: -660px;
   }
 }
 .dogs-naname {
@@ -147,12 +141,9 @@ export default {
   margin-top: -300px;
   opacity: 0.5;
 }
-#dogs-area {
-  margin-top: -480px;
-}
 .dogs-bottom {
   background-color: #fff7e6;
-  margin-top: -300px;
+  margin-top: -430px;
   z-index: 5;
 }
 @media screen and (max-width: 767px) {
